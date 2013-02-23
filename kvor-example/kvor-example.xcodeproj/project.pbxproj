@@ -17,6 +17,9 @@
 		F479C92516D9647E00DE7527 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F479C92416D9647E00DE7527 /* Default@2x.png */; };
 		F479C92716D9647E00DE7527 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F479C92616D9647E00DE7527 /* Default-568h@2x.png */; };
 		F479C93116D964EC00DE7527 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F479C93016D964EC00DE7527 /* MainStoryboard.storyboard */; };
+		F479C93616D966B800DE7527 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F479C93516D966B800DE7527 /* ViewController.m */; };
+		F479C93916D9676B00DE7527 /* KVOR.m in Sources */ = {isa = PBXBuildFile; fileRef = F479C93816D9676B00DE7527 /* KVOR.m */; };
+		F479C93C16D968EB00DE7527 /* KVORTaskObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F479C93B16D968EB00DE7527 /* KVORTaskObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,13 @@
 		F479C92416D9647E00DE7527 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F479C92616D9647E00DE7527 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F479C93016D964EC00DE7527 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F479C93416D966B800DE7527 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F479C93516D966B800DE7527 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F479C93716D9676B00DE7527 /* KVOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOR.h; sourceTree = "<group>"; };
+		F479C93816D9676B00DE7527 /* KVOR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOR.m; sourceTree = "<group>"; };
+		F479C93A16D968EB00DE7527 /* KVORTaskObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVORTaskObserver.h; sourceTree = "<group>"; };
+		F479C93B16D968EB00DE7527 /* KVORTaskObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVORTaskObserver.m; sourceTree = "<group>"; };
+		F479C93D16D96D6400DE7527 /* KVORTaskBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVORTaskBlock.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,7 @@
 		F479C92D16D964D300DE7527 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F479C93216D966A600DE7527 /* UI */,
 				F479C91F16D9647E00DE7527 /* AppDelegate.h */,
 				F479C92016D9647E00DE7527 /* AppDelegate.m */,
 			);
@@ -122,9 +133,31 @@
 		F479C92F16D964DB00DE7527 /* KVOR */ = {
 			isa = PBXGroup;
 			children = (
+				F479C93716D9676B00DE7527 /* KVOR.h */,
+				F479C93816D9676B00DE7527 /* KVOR.m */,
+				F479C93A16D968EB00DE7527 /* KVORTaskObserver.h */,
+				F479C93B16D968EB00DE7527 /* KVORTaskObserver.m */,
+				F479C93D16D96D6400DE7527 /* KVORTaskBlock.h */,
 			);
 			name = KVOR;
 			path = ../../KVOR;
+			sourceTree = "<group>";
+		};
+		F479C93216D966A600DE7527 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F479C93316D966A600DE7527 /* ViewControllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F479C93316D966A600DE7527 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F479C93416D966B800DE7527 /* ViewController.h */,
+				F479C93516D966B800DE7527 /* ViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +228,9 @@
 			files = (
 				F479C91D16D9647E00DE7527 /* main.m in Sources */,
 				F479C92116D9647E00DE7527 /* AppDelegate.m in Sources */,
+				F479C93616D966B800DE7527 /* ViewController.m in Sources */,
+				F479C93916D9676B00DE7527 /* KVOR.m in Sources */,
+				F479C93C16D968EB00DE7527 /* KVORTaskObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
