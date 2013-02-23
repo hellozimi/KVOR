@@ -9,6 +9,6 @@
 #ifndef kvor_example_KVORTaskBlock_h
 #define kvor_example_KVORTaskBlock_h
 
-
+typedef void(^KVORObserverTaskBlock)(NSString *keyPath, NSDictionary *change);
 
 #endif
