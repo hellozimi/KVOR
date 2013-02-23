@@ -16,6 +16,7 @@
 		F479C92316D9647E00DE7527 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F479C92216D9647E00DE7527 /* Default.png */; };
 		F479C92516D9647E00DE7527 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F479C92416D9647E00DE7527 /* Default@2x.png */; };
 		F479C92716D9647E00DE7527 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F479C92616D9647E00DE7527 /* Default-568h@2x.png */; };
+		F479C93116D964EC00DE7527 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F479C93016D964EC00DE7527 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +28,12 @@
 		F479C91A16D9647E00DE7527 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F479C91C16D9647E00DE7527 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F479C91E16D9647E00DE7527 /* kvor-example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kvor-example-Prefix.pch"; sourceTree = "<group>"; };
-		F479C91F16D9647E00DE7527 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F479C92016D9647E00DE7527 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F479C91F16D9647E00DE7527 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		F479C92016D9647E00DE7527 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		F479C92216D9647E00DE7527 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F479C92416D9647E00DE7527 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F479C92616D9647E00DE7527 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F479C93016D964EC00DE7527 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,9 @@
 		F479C91616D9647E00DE7527 /* kvor-example */ = {
 			isa = PBXGroup;
 			children = (
-				F479C91F16D9647E00DE7527 /* AppDelegate.h */,
-				F479C92016D9647E00DE7527 /* AppDelegate.m */,
+				F479C92F16D964DB00DE7527 /* KVOR */,
+				F479C92D16D964D300DE7527 /* Classes */,
+				F479C92E16D964D300DE7527 /* Resources */,
 				F479C91716D9647E00DE7527 /* Supporting Files */,
 			);
 			path = "kvor-example";
@@ -97,6 +100,31 @@
 				F479C92616D9647E00DE7527 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F479C92D16D964D300DE7527 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F479C91F16D9647E00DE7527 /* AppDelegate.h */,
+				F479C92016D9647E00DE7527 /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F479C92E16D964D300DE7527 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F479C93016D964EC00DE7527 /* MainStoryboard.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F479C92F16D964DB00DE7527 /* KVOR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = KVOR;
+			path = ../../KVOR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +182,7 @@
 				F479C92316D9647E00DE7527 /* Default.png in Resources */,
 				F479C92516D9647E00DE7527 /* Default@2x.png in Resources */,
 				F479C92716D9647E00DE7527 /* Default-568h@2x.png in Resources */,
+				F479C93116D964EC00DE7527 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
