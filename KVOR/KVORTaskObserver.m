@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 hiddencode.me. All rights reserved.
 //
 
-#import "KVORTaskObservee.h"
+#import "KVORTaskObserver.h"
 
-@implementation KVORTaskObservee
+@implementation KVORTaskObserver
+
++ (KVORTaskObserver *)observer {
+    return [[[self class] alloc] init];
+}
 
 @end

@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KVORTaskBlock.h"
 
-@interface KVORTaskObservee : NSObject
+@interface KVORTaskObserver : NSObject
+
+@property (nonatomic, strong) id object;
+@property (nonatomic, strong) NSString *keyPath;
+@property (nonatomic, assign) NSKeyValueObservingOptions options;
+@property (nonatomic, assign) void *context;
+@property (nonatomic, copy) KVORObserverTaskBlock block;
+
++ (KVORTaskObserver *)observer;
 
 @end
