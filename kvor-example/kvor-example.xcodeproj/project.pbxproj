@@ -43,7 +43,7 @@
 		F479C93816D9676B00DE7527 /* KVOR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOR.m; sourceTree = "<group>"; };
 		F479C93A16D968EB00DE7527 /* KVORTaskObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVORTaskObserver.h; sourceTree = "<group>"; };
 		F479C93B16D968EB00DE7527 /* KVORTaskObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVORTaskObserver.m; sourceTree = "<group>"; };
-		F479C93D16D96D6400DE7527 /* KVORTaskBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVORTaskBlock.h; sourceTree = "<group>"; };
+		F479C93D16D96D6400DE7527 /* KVORConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVORConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 				F479C93816D9676B00DE7527 /* KVOR.m */,
 				F479C93A16D968EB00DE7527 /* KVORTaskObserver.h */,
 				F479C93B16D968EB00DE7527 /* KVORTaskObserver.m */,
-				F479C93D16D96D6400DE7527 /* KVORTaskBlock.h */,
+				F479C93D16D96D6400DE7527 /* KVORConstants.h */,
 			);
 			name = KVOR;
 			path = ../../KVOR;
