@@ -5,14 +5,14 @@ KVOR is a block based wrapper around [KVO](https://developer.apple.com/library/m
 ### Methods
 Add observer
 
-```
+```objc
 + (void)target:(id)target keyPath:(NSString *)keyPath task:(KVORObserverTaskBlock)block;
 + (void)target:(id)target keyPaths:(NSArray *)keyPaths task:(KVORObserverTaskBlock)block;
 ```
 
 Remove observer
 
-```
+```objc
 + (void)removeObserverWithTarget:(id)target andKeyPath:(NSString *)keyPath;
 + (void)removeObserverWithTarget:(id)target andKeyPaths:(NSArray *)keyPaths;
 + (void)removeAllObservers;
