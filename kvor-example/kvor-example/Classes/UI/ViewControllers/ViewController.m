@@ -30,11 +30,16 @@
     
     self.slider.continuous = YES;
     
-    [KVOR target:self.slider keyPath:@"value" task:^(NSString *keyPath, NSDictionary *change) {
-        if ([keyPath isEqualToString:@"value"]) {
-            NSLog(@"%f", [self.slider value]);
-        }
-    }];
+    __block typeof(self) weakSelf = self;
+    
+    [KVOR target:self.slider
+         keyPath:@"value"
+            task:^(NSString *keyPath, NSDictionary *change) {
+                if ([keyPath isEqualToString:@"value"]) {
+                    NSLog(@"VALUE: %f", [weakSelf.slider value]);
+                }
+                
+            }];
 }
 
 - (void)didReceiveMemoryWarning
