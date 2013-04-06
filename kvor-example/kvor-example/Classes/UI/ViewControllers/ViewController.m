@@ -10,6 +10,7 @@
 #import "KVOR.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -28,15 +29,14 @@
 {
     [super viewDidLoad];
     
-    self.slider.continuous = YES;
+    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height*4);
     
     __block typeof(self) weakSelf = self;
-    
-    [KVOR target:self.slider
-         keyPath:@"value"
+    [KVOR target:self.scrollView
+         keyPath:@"contentOffset"
             task:^(NSString *keyPath, NSDictionary *change) {
-                if ([keyPath isEqualToString:@"value"]) {
-                    NSLog(@"VALUE: %f", [weakSelf.slider value]);
+                if ([keyPath isEqualToString:@"contentOffset"]) {
+                    NSLog(@"Offset: %@", NSStringFromCGPoint([weakSelf.scrollView contentOffset]));
                 }
                 
             }];
