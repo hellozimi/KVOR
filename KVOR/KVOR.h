@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KVORTaskBlock.h"
+#import "KVORConstants.h"
 
 @interface KVOR : NSObject
 

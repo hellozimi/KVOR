@@ -18,10 +18,6 @@
 
 @implementation KVOR
 
-uint KVORHashPointerForObserver(id object, NSArray *keyPaths) {
-    return [[NSString stringWithFormat:@"%p.%@.%@", object, NSStringFromClass([object class]), [keyPaths componentsJoinedByString:@"."]] hash];
-}
-
 #pragma mark -
 
 + (void)target:(id)target keyPath:(NSString *)keyPath task:(KVORObserverTaskBlock)block {
@@ -29,10 +25,11 @@ uint KVORHashPointerForObserver(id object, NSArray *keyPaths) {
 }
 
 + (void)target:(id)target keyPaths:(NSArray *)keyPaths task:(KVORObserverTaskBlock)block {
-    
-    void *context = (void *)KVORHashPointerForObserver(target, keyPaths);
-    
+        
     for (NSString *keyPath in keyPaths) {
+        
+        void *context = (void *)KVORHashPointerForObserver(target, keyPath);
+
         KVORTaskObserver *observer = [KVORTaskObserver observer];
         observer.object = target;
         observer.context = context;
@@ -59,9 +56,10 @@ uint KVORHashPointerForObserver(id object, NSArray *keyPaths) {
 
 + (void)removeObserverWithTarget:(id)target andKeyPaths:(NSArray *)keyPaths {
     
-    void *context = (void *)KVORHashPointerForObserver(target, keyPaths);
-    
     for (NSString *keyPath in keyPaths) {
+        
+        void *context = (void *)KVORHashPointerForObserver(target, keyPath);
+        
         [target removeObserver:[KVOR sharedInstance] forKeyPath:keyPath context:context];
         KVORTaskObserver *observer = [[KVOR sharedInstance] observerForContext:context];
         [[[KVOR sharedInstance] observers] removeObject:observer];
@@ -93,6 +91,10 @@ uint KVORHashPointerForObserver(id object, NSArray *keyPaths) {
 }
 
 - (void)addObserver:(KVORTaskObserver *)observer {
+    
+    if ([self.observers containsObject:observer]) {
+        return;
+    }
     
     if (!self.observers) {
         self.observers = [[NSMutableArray alloc] init];
